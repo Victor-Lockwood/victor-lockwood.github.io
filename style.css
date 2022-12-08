@@ -39,7 +39,7 @@ body {
 }
 
 .main-ul {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .section-2 {
