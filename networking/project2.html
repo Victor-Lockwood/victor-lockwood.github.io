@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel="stylesheet" href="../style.css">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Victor Lockwood - Networking Project 2</title>
+    </head>
+
+    <body>
+        <div class="main-body">
+            <h1>TFTP Throughput Report</h1>
+        </div>
+
+        <div class="section">
+            <h2>TFTP Throughput Report</h2>
+
+            <p>
+                I have implemented a form of TFTP with client and server using TCP's Sliding Window scheme on top of UDP.  
+                Timeouts were calculated with a form of EWMA and the system is able to send both read and write requests.  Images are
+                encrypted using an XOR key that gets shifted every 64 bytes.  Key exchange occurs in the handshake.
+            </p>
+
+            <div>
+                <img src="../media/pepper.jpg" class="under-construction" />
+            </div>
+
+            <p>
+                Measurements were made using two client-server pairs on the CS servers, one set was Altair client and Rho server,
+                and Pi client with Gee server.  Measurements were compared using simulated drops and no drops as windows of sizes 5, 25 and 50.
+                An image of 1875419 bytes (around 1.9MB) called "pepper.jpg" was used for testing.
+            </p>
+
+            <p>
+                Throughput generally peaked in all cases with a window size 25, except in the case for Pi -> Gee with no drops, 
+                which peaked at window size 50. Throughput was lower in all cases when drops were introduced.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Pi and Gee</h2>
+
+            <div>
+                <img src="../media/pigeenodrops.png" class="under-construction" />
+            </div>
+
+            <div>
+                <img src="../media/pigeetftpdrops.png" class="under-construction" />
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Altair and Rho</h2>
+
+            <div>
+                <img src="../media/altairrhonodrops.png" class="under-construction" />
+            </div>
+
+            <div>
+                <img src="../media/altairrhodrops.png" class="under-construction" />
+            </div>
+
+        </div>
+
+
+        <footer>
+            <p>----------------------</p>
+            <a href="../index.html">Return to Home Page</a><br />
+            <a href="../media-attributions/index.html">Media Attributions</a>
+        </footer>
+    </body>
+
+</html>
+
